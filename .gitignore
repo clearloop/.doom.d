@@ -1,0 +1,9 @@
+# OSX
+.DS_Store
+
+# emacs
+custom.el
+
+# extensions
+org
+snippets
