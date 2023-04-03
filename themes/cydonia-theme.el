@@ -64,6 +64,14 @@
 
  ;; lsp
  '(lsp-ui-doc-background ((t (:background "color-18"))))
+
+ ;; ;; rainbow-delimiters
+ ;; '(rainbow-delimiters-depth-3-face ((t (:inherit rainbow-delimiters-base-face :foreground "dark slate blue"))))
+
+ ;; web-mode
+ '(web-mode-html-attr-name-face ((t (:foreground "Snow4"))))
+ '(web-mode-html-tag-bracket-face ((t (:foreground "Snow4"))))
+ '(web-mode-html-tag-face ((t (:foreground "Snow4"))))
  )
 
 (provide-theme 'cydonia)

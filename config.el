@@ -38,6 +38,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type nil)
 
+;; Global configs
+(setq truncate-lines nil)
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/.doom.d/org")
@@ -73,22 +76,23 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
               ("<tab>" . 'copilot-accept-completion)
               ("TAB" . 'copilot-accept-completion)))
 
-(use-package lsp-ui-doc
+(use-package! lsp-ui-doc
   :custom
   (lsp-ui-doc-include-signature t)
   (lsp-ui-doc-show-with-cursor t))
 
-(use-package rustic
+(use-package! rustic
   :custom
   (rustic-format-trigger 'on-save)
   (rustic-format-on-save-method 'rustic-format-file))
+
+(use-package! typescript-mode :after typescript-tsx-mode)
 
 ;; Local configurations.
 (load! "./funcs.el")
