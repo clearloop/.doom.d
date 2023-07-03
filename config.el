@@ -87,12 +87,15 @@
   (lsp-ui-doc-include-signature t)
   (lsp-ui-doc-show-with-cursor t))
 
-(use-package! rustic
-  :custom
-  (rustic-format-trigger 'on-save)
-  (rustic-format-on-save-method 'rustic-format-file))
-
 (use-package! typescript-mode :after typescript-tsx-mode)
+
+(use-package! wat-mode :mode "\\.wat\\'")
+
+(after! rustic
+  (setq rustic-format-trigger 'on-save)
+  (setq rustic-format-on-save-method 'rustic-format-file))
+
+
 
 ;; Local configurations.
 (load! "./funcs.el")
