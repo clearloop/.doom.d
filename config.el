@@ -40,6 +40,7 @@
 
 ;; Global configs
 (setq truncate-lines nil)
+(add-hook 'prog-mode-hook 'visual-line-mode)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
