@@ -7,3 +7,7 @@
 (defun previous-5-lines() (interactive)
        "move to previous 5 lines"
        (previous-line 5))
+
+(defun select-treemacs() (interactive)
+       "switch to treemacs window"
+       (treemacs-select-window))

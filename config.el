@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "tianyi"
-      user-mail-address "tianyi.zh@proton.me")
+      user-mail-address "tianyi.gc@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -77,11 +77,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(use-package! copilot
-  :hook (prog-mode . copilot-mode)
-  :bind (:map copilot-completion-map
-              ("<tab>" . 'copilot-accept-completion)
-              ("TAB" . 'copilot-accept-completion)))
+;; (use-package! copilot
+;;   :hook (prog-mode . copilot-mode)
+;;   :bind (:map copilot-completion-map
+;;               ("<tab>" . 'copilot-accept-completion)
+;;               ("TAB" . 'copilot-accept-completion)))
 
 (use-package! lsp-ui-doc
   :custom
@@ -91,12 +91,6 @@
 (use-package! typescript-mode :after typescript-tsx-mode)
 
 (use-package! wat-mode :mode "\\.wat\\'")
-
-(after! rustic
-  (setq rustic-format-trigger 'on-save)
-  (setq rustic-format-on-save-method 'rustic-format-file))
-
-
 
 ;; Local configurations.
 (load! "./funcs.el")
